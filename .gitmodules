@@ -1,0 +1,3 @@
+[submodule "Django-HTMX-Finance-App"]
+	path = Django-HTMX-Finance-App
+	url = https://github.com/bugbytes-io/Django-HTMX-Finance-App
