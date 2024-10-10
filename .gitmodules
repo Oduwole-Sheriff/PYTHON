@@ -7,3 +7,6 @@
 [submodule "DJANGO_HTMX/Django-HTMX-Finance-App"]
 	path = DJANGO_HTMX/Django-HTMX-Finance-App
 	url = https://github.com/bugbytes-io/Django-HTMX-Finance-App
+[submodule "Django-income-expence-website/expenseswebsite"]
+	path = Django-income-expence-website/expenseswebsite
+	url = https://github.com/Oduwole-Sheriff/Finance-Tracker
