@@ -1,3 +1,6 @@
 [submodule "Django-HTMX-Finance-App"]
 	path = Django-HTMX-Finance-App
 	url = https://github.com/bugbytes-io/Django-HTMX-Finance-App
+[submodule "DJANGO_ORM/Django-ORM-Mastery-DJ003"]
+	path = DJANGO_ORM/Django-ORM-Mastery-DJ003
+	url = https://github.com/username/repo.git
