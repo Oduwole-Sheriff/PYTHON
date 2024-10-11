@@ -1,0 +1,18 @@
+{% extends 'Base/base.html' %}
+{% block content %}
+
+    <div class="list-block">
+            <div class="post">
+                <div class="date">
+                    <h6>{{object.content}}</h6>
+                    <small>{{object.date_posted}}</small>
+                </div>
+                <div class="edit">
+                    <a href="{% url 'task_delete' object.id %}" class="btn btn-danger">Delete</a>
+                    <a href="{% url 'task_update' object.id %}" class="btn btn-info">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

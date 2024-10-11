@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <p id='test'>THIS IS A PARAGRAPH</p>
+    <p id='p1'>Hover Me</p>
+    <p id='p2'>Click Me</p>
+    <p id='p3'>Double Click Me</p>
+    <p id='p4'>Leave Me Alone</p>
+    <p id='p5'>Press [enter]</p>
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#test").click(function() {
+                // alert('CLICKED...')
+                $(this).hide();
+            });
+            $('#p1').hover(function (){
+                $(this).hide();
+            })
+            $('#p2').click(function(){
+                $(this).hide();
+            })
+            $('#p3').dblclick(function (){
+                $(this).hide();
+            })
+            $('#p4').mouseleave(function (){
+                $(this).hide();
+            })
+            var menuTrigger = false;
+            $(document).keypress(function(e) {
+                if(e.which == 13){
+                    if(menuTrigger == false){
+                        $('nav').fadeIn(500);
+                        menuTrigger = true;
+                    }
+                    else if (menuTrigger == true){
+                        $('nav').fadeOut(500);
+                        menuTrigger = false;
+                    }
+                }
+            })
+        });
+        
+        // document.getElementById('test').onclick = function(){
+        //     alert('CLICKED');
+        // }
+    </script>
+</body>
+</html>

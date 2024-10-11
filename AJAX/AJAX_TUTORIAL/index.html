@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="test">
+        <p>THIS IS THE MAIN DATA</p>
+    </div>
+    <button id="btn">
+        CLICK TO CHANGE TEXT
+    </button><br><br><br>
+
+    <button id="btn2">
+        CLICK TO GET DATA TEXT
+    </button>
+    <p id="text"> </p>
+
+    <input type="text" name="name">
+    <p id="suggest"></p>
+    <script>
+        $(document).ready(function (){
+            $('#btn').click(function() {
+                $('#test').load("data.txt", function(){
+                    alert('HELLO WELCOME!');
+                });
+            });
+
+            $('#btn2').click(function(){
+                $.get('test.txt', function(data, status){
+                    $('#text').html(data);
+                    alert(status);
+                })
+            })
+
+            $('input').keyup(function(){
+                var name = $('input').val();
+                $.post('suggestion.php', {suggestion : name}, function(data, status){
+                    $('#suggest').html(data);
+                })
+            })
+
+        });
+    </script>
+
+</body>
+</html>

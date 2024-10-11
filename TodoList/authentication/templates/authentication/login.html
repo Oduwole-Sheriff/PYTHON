@@ -1,0 +1,91 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'Base/main.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Authentication</title>
+</head>
+<body class="authentication-bg">  
+
+    <div class="container">
+        <div class="row justify-content-between graphics-row">
+            <div class="col-md-6 graphics">
+                <div class="graphics-text">
+                    <h1>
+                        Simplify management with our dashboard.
+                    </h1><br>
+                    <p class="text-white">
+                        Simplify Your Task Management With Our User-Friendly Admin Dashboard 
+                    </p>
+                </div>
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/affiliate-marketing-6630401-5552843.png?f=webp" alt=""> 
+            </div> 
+            <div class="col-md-6 content-section"> 
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <fieldset>
+                        <legend class="mb-4 fw-bold text-center">
+                            <div class="logo mb-2">
+                                <img class="rounded-circle account-img" src="https://seeklogo.com/images/J/jquery-ui-logo-9650A7C0FD-seeklogo.com.png" alt="">
+                                E SPURT
+                            </div>
+                            <div class="logo-text">
+                                <h1>Welcome Back</h1>
+                                <small class="text-muted fw-light"> Please sign-in your account </span></small>
+                            </div>
+                        </legend>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="forgotten-password-style">
+                        <small class="text-muted">
+                            <a href="{% url 'password_reset' %}">Forgotten Password?</a>
+                        </small>
+                    </div>
+                    <div>
+                        <button class="btn btn-info mt-3 mb-2" type="submit">
+                            Login
+                        </button>
+                    </div>
+                </form>
+                <div class="links">
+                    <div class="link-design">
+                        <div class="line"></div>
+                        <small class="mx-2 text-muted">Or login with</small>
+                        <div class="line"></div>
+                    </div>
+                    <div class="link-account">
+                        <div class="link-account-img">
+                            <img class="rounded-circle account-img" src="https://static-00.iconduck.com/assets.00/google-icon-128x128-w7hrizf8.png" alt="">
+                            <h6 class="mt-2">Google</h6>
+                        </div>
+                        <div class="link-account-img2">
+                            <img class="rounded-circle account-img" src="https://cdn-icons-png.freepik.com/256/5968/5968764.png?semt=ais_hybrid" alt="">
+                            <h6 class="mt-2">Facebook</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <small>Don't have an account? <a href="{% url 'register' %}">Sign up</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

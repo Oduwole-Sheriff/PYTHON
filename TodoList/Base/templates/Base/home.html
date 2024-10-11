@@ -1,0 +1,38 @@
+{% extends 'Base/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="container mt-3">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-sm-2">
+                    <p>Welcome ({{user.username}})</p>
+                </div>
+                <div class="col-sm-2" style="margin-right: -70px;">
+                    <a href="{% url 'logout' %}" class="btn btn-sm btn-outline-secondary">Logout</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="content-box">
+        <h1 class="text-center">TODO LIST</h1>
+        <div class="buttons mt-5">
+            <a href="{% url 'new_task' %}" class="btn btn-primary">Add Task</a>
+            <p> Total Completed Task ({{ completed_tasks }} / {{total_tasks}}) </p>         
+        </div>
+        <div class="list-block">
+            {% for task in tasks %}
+                <div class="post">
+                    <div class="date">
+                        <h6><a href="{% url 'task_detail' task.id %}">{{task.content}}</a></h6>
+                        <small>{{task.date_posted}}</small>
+                    </div>
+                    <div class="edit">
+                        <a href="{% url 'task_delete' task.id %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'task_update' task.id %}" class="btn btn-info">Edit</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+.content{
+    width: 80%;
+    background: rgb(236, 226, 226);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.first-btn{
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+.add-all-btn{
+    width: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-1{
+    width: 100% !important;
+    background: rgb(246, 246, 243) !important;
+    margin: 50px 0 !important;
+    padding: 25px;
+}
+
+.box-2{
+    background: rgb(255, 251, 251);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.box-check{
+    width: 30px;
+    height: 25px;
+    margin: 0 10px;
+}
+
+h4{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.box-3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-3 div{
+    margin: 0;
+}
+
+.Edit-delete{
+    display: flex;
+}

@@ -1,0 +1,33 @@
+{% extends 'To_Do_List/base.html' %}
+{% block content %}
+    <div class="container box-1">
+        <h1 class="text-center mt-2 fw-bold">TODO LIST</h1>
+        <div class="container add-all-btn mt-5 mb-2">
+            <a href="{% url 'add-post' %}" type="button" class="btn btn-primary btn-lg first-btn">ADD</a>
+            <a href="#" type="button" class="btn btn-secondary btn-lg first-btn">Totla - {{div_count}}</a>                
+        </div>
+        <div class="container content">
+            {% for post in posts %}
+                <div class="box-2 p-3 mb-4"">
+                    <div class="btn-group box-check" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1"></label>
+                    </div>
+                    <div class="box-3">
+                        <div>
+                            <h6 class="mb-0">{{ post.content }}</h6>
+                            <p>{{ post.date_posted }}</p>
+                        </div>
+                        <div class="Edit-delete">
+                            <a href='{% url "delete-post" post.id %}' type="button" class="btn btn-danger me-3">Delete</a>
+                            <a href="{% url 'update-post' post.id %}" type="button" class="btn btn-secondary">Edit</a>
+                        </div>    
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+
+    </div>
+
+{% endblock %}

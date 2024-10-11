@@ -1,0 +1,24 @@
+body{
+    background: rgb(83, 223, 41) !important;
+}
+
+.message{
+    display: none;
+}
+
+.button-c{
+    padding: 7px 10px !important;
+    background-color: #000000;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    border-radius: 5px;
+}
+
+.blue {
+    background-color: #007bff;
+}
+
+.red {
+    background-color: #ff3932;
+}
