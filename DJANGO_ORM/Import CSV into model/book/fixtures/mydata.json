@@ -1,0 +1,130 @@
+[
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Harry Potter and the Half-Blood Prince (Harry Potter  #6)",
+            "authors": "J.K. Rowling/Mary GrandPr",
+            "average_rating": 4.57,
+            "isbn": "439785960",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "652",
+            "ratings_count": "2095690",
+            "text_reviews_count": "27591",
+            "publication_date": "2006-09-16",
+            "publisher": "Scholastic Inc."
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Harry Potter and the Order of the Phoenix (Harry Potter  #5)",
+            "authors": "J.K. Rowling/Mary GrandPr",
+            "average_rating": 4.49,
+            "isbn": "439358078",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "870",
+            "ratings_count": "2153167",
+            "text_reviews_count": "29221",
+            "publication_date": "2004-09-01",
+            "publisher": "Scholastic Inc."
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Harry Potter and the Chamber of Secrets (Harry Potter  #2)",
+            "authors": "J.K. Rowling",
+            "average_rating": 4.42,
+            "isbn": "439554896",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "352",
+            "ratings_count": "6333",
+            "text_reviews_count": "244",
+            "publication_date": "2003-11-01",
+            "publisher": "Scholastic"
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Harry Potter and the Prisoner of Azkaban (Harry Potter  #3)",
+            "authors": "J.K. Rowling/Mary GrandPr",
+            "average_rating": 4.56,
+            "isbn": "043965548X",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "435",
+            "ratings_count": "2339585",
+            "text_reviews_count": "36325",
+            "publication_date": "2004-05-01",
+            "publisher": "Scholastic Inc."
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Harry Potter Boxed Set  Books 1-5 (Harry Potter  #1-5)",
+            "authors": "J.K. Rowling/Mary GrandPr",
+            "average_rating": 4.78,
+            "isbn": "439682584",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "2690",
+            "ratings_count": "41428",
+            "text_reviews_count": "164",
+            "publication_date": "2004-09-13",
+            "publisher": "Scholastic"
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Unauthorized Harry Potter Book Seven News: \"Half-Blood Prince\" Analysis and Speculation",
+            "authors": "W. Frederick Zimmerman",
+            "average_rating": 3.74,
+            "isbn": "976540606",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "152",
+            "ratings_count": "19",
+            "text_reviews_count": "1",
+            "publication_date": "2005-04-26",
+            "publisher": "Nimble Books"
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "Harry Potter Collection (Harry Potter  #1-6)",
+            "authors": "J.K. Rowling",
+            "average_rating": 4.73,
+            "isbn": "439827604",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "3342",
+            "ratings_count": "28242",
+            "text_reviews_count": "808",
+            "publication_date": "2005-09-12",
+            "publisher": "Scholastic"
+        }
+    },
+    {
+        "model": "book.books",
+        "fields": {
+            "title": "The Ultimate Hitchhiker\u0027s Guide: Five Complete Novels and One Story (Hitchhiker\u0027s Guide to the Galaxy  #1-5)",
+            "authors": "Douglas Adams",
+            "average_rating": 4.38,
+            "isbn": "517226952",
+            "isbn13": "9.78E+12",
+            "language_code": "eng",
+            "num_pages": "815",
+            "ratings_count": "3628",
+            "text_reviews_count": "254",
+            "publication_date": "2005-11-01",
+            "publisher": "Gramercy Books"
+        }
+    }
+]

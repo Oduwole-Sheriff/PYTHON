@@ -1,0 +1,23 @@
+services:
+    pgdb:
+        container_name: pgdb_books
+        image: postgres
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_DB=
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+
+    pgadmin:
+        container_name: pgadmin4
+        image: dpage/pgadmin4
+        restart: always
+
+        environment:
+            PGADMIN_DEFAULT_EMAIL: she@riff.com
+            PGADMIN_DEFAULT_PASSWORD: 12345
+
+        ports:
+            - "5050:80"
